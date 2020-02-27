@@ -96,20 +96,28 @@
                                 <ul align="left">
                                     <h5>
                                         <li>
-                                            A single-player VR survival game currently in development.
+                                            Outbreak is a single-player VR survival game currently in development. The game is based on a player moving about the environment to collect item-drops like weapons, bullets, interact with the environment like doors, cabinets and kill enemies to complete objectives and enjoy the story.
                                         </li>
                                         <li>
-                                            Created a task list system and an objective manager for easy story depiction and game design for other developers.
-											All objects, sounds, interactions and UI management is managed by the the task list system. The Objective manager transitions from one level to the next, depending on if the player does certain actions specified by an objective for completion.
+                                            For easy creation and maintenance of the project, I created a Level Manager, Task System, Objective Manager. These components are XML based and serializable systems, to make development easy for level designers and artists.
                                         </li>
+										<li>
+											Level Manager : Manages all the of its sub levels, data to be set on the player on start of each sub level, the player data that needs to be saved. A level designer can easily select and edit the level data, For example: If the designer wants the player to have an AK-47 type of gun as his primary gun and the gun needs to have 50 bullets with 5 bullets in its first cartridge, the designer can easily do so from the level manager.
+										</li>
+										<li>
+											Task System : The task system includes XML pages which manages a sequence of instructions. For example : A designer can create a sequence of instructions to start/stop a sound, position the player, add/remove an object, manage the environment etc. And these sequences can be called from anywhere within the game with a unique ID.
+										</li>
+										<li>
+											Objective System : The objective system manages the range of objectives within any level. When an objective is complete, the system registers that completion and transitions the game to the next level on the completion of all objectives of that level. The objective list can be edited to be an unordered or ordered list, ordererd : an objective is complete only if the previos objective is complete.
+										</li>
                                         <li>
                                             All objects that are reusable in the game like item drops, weapon drops, enemies, 2D audio sources are managed by an object pool for optimization purposes to promote reusability and prevent the instantiation of an object each time it is required.
                                         </li>
-                                        <li>
-                                            Added a level manager for easy level creation, addition of cinematics, scenes, loading from and saving to player data on the device stored locally.
+										<li>
+                                            The entire game is interconnected by an Event System that fires an event to manage every step of the game. 
                                         </li>
                                         <li>
-                                            Added a weapon manager and weapon mechanics. Three different weapon categories, melee, primary and secondary. Each weapon can be set up with certain bullet types, reloading, damage and other characteristics.
+                                            With the use of the above features the development process is made easy for designers to add cinematic scenes, game play scenes, manage the player. Each weapon and item in the game is customizable with fire rate, features etc.
                                         </li>
 										<li>
                                             Created a shader for object highlighting, crosshair and environment designs.
@@ -138,7 +146,7 @@
                                 <ul align="left">
                                     <h5>
                                         <li>
-                                            A single-player bowling game for VR that can be played with only the headset or with the remote.
+                                            A single-player arcade bowling game for VR. The controls are easy to handle, intuitive to understand and can be played with only the headset or with the controller.
                                         </li>
 										<li>
                                             The game contains 3 levels and a practice level. Each level is based on a unique location, each having its own interactions in the environment.
@@ -147,16 +155,13 @@
                                             The gameplay includes 6 different types of bowling balls. Each ball has a unique ability for specific situations, for example the clone ball which splits into 2 balls.
                                         </li>
                                         <li>
-                                            Worked with a UI artist and Environment artist.
+                                            Implemented In-App purchases for Oculus purchases as well In-Game currency, the In-Game currency earned to spend on items in other games developed by the company.
+                                        </li>
+										<li>
+                                            A player can choose to purchase other levels or Mashmo coins and spend the coins on balls, ball skins etc to use in game.
                                         </li>
                                         <li>
-                                            Optimized the graphics and processing to work smoothly on mobile devices.
-                                        </li>
-                                        <li>
-                                            Implemented In-App purchases for Oculus purchases as well In-Game currency. Can use the In-Game currency earned to spend on items in other games developed by the company.
-                                        </li>
-                                        <li>
-                                            Created a leaderboard, achievements, multiple levels with their own distinct characteristics.
+                                            Created a leaderboard, achievements and puzzle pieces unlock to engage the user with the game.
                                         </li>
                                     </h5>
 
@@ -194,16 +199,17 @@
                                             Better Meals is a diet and weight management application with dish recommendations.
                                         </li>
                                         <li>
-                                            Worked on all the UI, server connection, subscriptions.
+                                            The application allows the user to subscribe different plans based on the particular platform subscription offerings.
                                         </li>
                                         <li>
-                                            Integrated the connection between the server side and user to retrieve a recipe demanded by the user based on the user's characteristics.
+                                            Integrated the connection between the server side and user to retrieve a recipe demanded by the user based on the user's characteristics. 
+											Various dishes and recipes will be offered to the user. The user can also choose to save the recipe into their 'Grocery List' for later.
                                         </li>
                                         <li>
-                                            Recommends meals and a diet plan based on the user's entered parameters.'
+                                            The user can track their weight and health based on the meals suggested by the system.
                                         </li>
                                         <li>
-                                            Added iOS subsciption service and Tenjin commands for analysis as requested by the client.
+                                            To track the users engagement with the application, Tenjin commands for analysis as requested by the client were added to the system. I created a system so the client can add as many commands as required for future requirements.
                                         </li>
                                         <br />
                                         <a href="https://apps.apple.com/us/app/bettermeals-weight-loss/id1470600927" class="icon brands alt fa"><img src="images/Project/logo_app_store.png" height="75" width="200" /></a>
@@ -233,13 +239,21 @@
                                             Potions and Arrows is a single player side-scroller game for Windows and XBox.
                                         </li>
                                         <li>
-                                            Created a dialogue UI panel that can display different effects on text for example: Jitter, Wavey, Typewriter, Colours using vertex movement of characters.
+                                            I created a dialogue UI panel that can display different effects on text for example: Jitter, Wavey, Typewriter, Colours using vertex movement of characters.
                                         </li>
                                         <li>
                                             Created a dialogue system and a database to take a sequence of dialogues from a set and display it with effects.
+											The system is made as a serializable component for easy editing by any developer.
+											Each dialgue can have as many effects as needed and a designer can edit these dialogues, add and remove an effect easily.
                                         </li>
                                         <li>
                                             Added player interaction to work alongside the dialogue system to enable certain functionality for example: allow a player to buy an item from a 'merchant' NPC.
+                                        </li>
+										<li>
+                                            All effects and their parameters can be edited from a serialized field. Fox Example: The rate at which a dialogue with typewriter effect is revealed etc.
+                                        </li>
+										<li>
+											The panel can also be used with options for the player to select. Like 'Buy', 'Exit' and each option can execute a function.
                                         </li>
                                     </ul>
                                 </h5>
@@ -279,30 +293,28 @@
                                         <li>
                                             Ninjutsu Warrior is a single-player VR slash game using the remote as a weapon.
                                         </li>
-                                        <li>
-                                            Worked with a UI artist and an environment artist.
+										<li>
+                                            The game has 2 modes, a classic and timed game.
                                         </li>
 										<li>
-                                            The game has 2 modes, a class and timed game. The game consists of 3 environments, each having 60 levels in the classic mode. Each set of 60 levels is ordered in increasing difficulty.
-                                        </li>
+											The game consists of 3 environments, each having 60 levels in the classic mode. Each set of 60 levels is ordered in an increasing order of difficulty.
+										</li>
 										<li>
-                                            Objects in the form of fruits and vegetables are shot at the user and the user has to slice these objects. Each level in the classic mode has a specifc amount and type of objects to slice. Completing the slicing objective, the user can go on to the next level.
+                                            Objects in the form of fruits and vegetables are shot towards the player and the user has to slice these objects using the remote as a weapon. Each level in the classic mode has a specifc amount and type of objects to slice. Completing the slicing objective, the user can go on to the next level.
 											Slicing a rotten fruit or vegetable will reduce your points in the level.
                                         </li>
 										<li>
                                             In the timed level slicing as many fruits as possible is the objective. Slicing a positive or negative clock thrown at you will increase or decrease the time allowed for you in that level.
                                         </li>
 										<li>
-                                            On account of a large amount of objects being used in a single level, the objects used are pooled for performance.
+                                            On account of a large amount of objects being used in a single level, the objects used are pooled for performance and avoid the instantiation of each object every time it is required.
                                         </li>
 										<li>
-                                            Implemented an In-App Purchase system to update a server with In-Game currency.
+                                            Implemented an In-App Purchase system to update a server with In-Game currency. The user can collect coins by completing levels and use those coins to purchase weapons.
+											All purchased, currency earned and level progress is saved and loaded from the server. The coins earned can be used to purchase items in other games published by Mashmo Games like Bowling Mania.
                                         </li>
                                         <li>
-                                            Created a level creation system so a designer can easily create a level as per their desired difficulty and desired components.
-                                        </li>
-                                        <li>
-                                            Made platform-specific and generic systems for easy compatibility with different VR platforms.
+                                            Made platform-specific and generic systems for easy compatibility with different VR platforms like PICO VR, Google Daydream.
                                         </li>
                                         <br />
                                         <a href="https://www.oculus.com/experiences/gear-vr/1576401609142102/" class="icon brands alt fa"><img src="images/Project/oculus_icon.jpg" height="100" width="190" /></a>
@@ -332,12 +344,13 @@
                                     <ul align="left">
                                         <li>
                                             Anesthesia SimSTAT is a single player game made for anesthesiologists to simulate various medical scenarios.
+											The player is given a certain medical operation scenario with a patient that is suffering with particular conditions. The player is responsible to analyze and point out the steps to complete the operation while playing the role of an anesthesiologist.
                                         </li>
+										<li>
+											During the course of the game the player has to infuse the patient with the correct amount medications. Set up a medication system to retrieve and send the correct dosage of medication to a server and the total amount of drugs infused.
+										</li>
                                         <li>
                                             Contributed to the development of a task executor that starts/ ends various types of tasks at certain points of the game.
-                                        </li>
-                                        <li>
-                                            Set up a medication system to retrieve and send the correct dosage of medication to a server and the total amount of drugs infused.
                                         </li>
                                         <li>
                                             A dynamic scoring system and UI that displays any amount of scores retrieved from the server.
@@ -376,25 +389,32 @@
                                 <ul align="left">
                                     <h5>
                                         <li>
-                                            A game engine to replicate features as required to create 2D or 3D games.
+                                            A gameobject-component based game engine to replicate features as required to create 2D or 3D games.
                                         </li>
                                         <li>
-                                            A gameobject-component based game engine with 2D physics using Box2D, post-processing, sprite batch renderer, XML animation entries.
+                                            The engine includes 2D physics using Box2D, post-processing, a sprite batch renderer, XML animation entries etc.
                                         </li>
 										<li>
                                             Components can be included on a gameobject. Components include animators, colliders, sprite renderers, images, camera, audio sources, lights, mesh renderers, animation controllers, character controllers.
+											A scene includes multiple gameobjects and multiple scenes can be loaded at the same time.
                                         </li>
 										<li>
                                             A user-designed class component can also be created and added to a gameobject.
                                         </li>
 										<li>
-                                            The main renderer object in the engine manages all rendering paths, post processing using a single camera at the moment, resizing, Open GL rendering settings.
+                                            The renderer in the engine manages all rendering paths, post processing using a single camera at the moment, resizing, Open GL rendering settings.
+                                        </li>
+										<li>
+                                            The graphics components include a post processing unit that uses a frame buffer, a skybox renderer using a cubemap texture etc.
+                                        </li>
+										<li>
+                                            An object to render can easily be modified to use a different material with a vertex, fragment, geometry shader.
                                         </li>
 										<li>
                                             Each scene manages all the gameobjects that are included in its hierarchy and a game object can be set to not be destroyed on transitioning to a different scene.
                                         </li>
                                         <li>
-                                            Attempted to replicate one of my favourite games 'Hotline Miami'
+                                            Attempted to replicate one of my favourite game 'Hotline Miami'
                                         </li>
 										<br />
                                         <a href="https://github.com/RohanFernandez/FretBuzzEngine" class="icon brands alt fa"><img src="images/Project/icon_github.png" height="120" width="200" /></a>
@@ -423,7 +443,7 @@
                                             Created components of a string, list, delegate, event and event handlers in C++ to replicate the availability in C#.
                                         </li>
                                         <li>
-                                            Allocates and frees the memory used within the object.
+                                            Each component allocates and frees the memory used within the object.
                                         </li>
 										<li>
 											The delegate is made to work with methods, const and static functions. It saves the type of object, class type, function, return type and parameters.
@@ -431,8 +451,11 @@
 											A delegate can be created to be used as a multicast delegate. The list is used to create a delegate to hold the different functions of a multicast delegate.
                                         </li>
 										<li>
-                                            The String, List resizes based on the user entries. An Event manager can have multiple handlers so that handlers can be restricted to manage only certain objects.
+                                            The String, List resizes based on the user entries. To prevent the allocation of memory at every string or list resize, the size of the component is incremented to twice the current component size or to the new size if the new size is more than twice the original size.
                                         </li>
+										<li>
+											An Event manager uses a dynamic pointer to call functions of that object. It can have multiple handlers so that handlers can be restricted to manage only certain events.
+										</li>
                                         <br />
                                         <a href="https://github.com/RohanFernandez/FuzzyLibrary" class="icon brands alt fa"><img src="images/Project/icon_github.png" height="120" width="200" /></a>
 </h5>
