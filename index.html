@@ -465,8 +465,85 @@
             </div>
         </section>
 
+		<!-- Two -->
+        <section id="ten" class="main style2">
+            <div class="container">
+                <div class="row gtr-150">
+                        <header class="major">
+                            <h2><strong><b>Unity Asset : Object Pooling System - Hobby Project </b></strong><br /></h2>
+                            <h3><strong>Unity Engine, C#</strong><br /></h3>
+                        </header>
+                        <p>
+                            <strong>
+                                <ul align="left">
+                                    <h5>
+                                        <li>
+                                            Each time you create an object for use you allocate the required memory on the heap and call its constructor. When the object is not required anymore you discard the object, calling the garbage collector and thereby deallocating the memory previously acquired. These processes take time during runtime when the application needs to run efficiently.
+                                        </li>
+										<li>
+											The object pooling system allows for creation of the object and storing the object in a pool. When required the object is taken out of the pool and used, when the object is not required anymore it is pushed back into the pool. As the object is already created and only destroyed when the application ends, it prevents the actions of instantiation and destruction allowing for each object to be reusable.
+										</li>
+										<li>
+											If the user requires an object and the object count of the pool that manages that object is zero, the pool will automatically create the object at runtime. If the programmer understands that the application will eventually require, for example 5 objects in the future, the programmer can set the size of the pool to 5 at the start. This will allow the system to create 5 objects and push them in the pool only to be popped when required during the application's lifetime.
+										</li>
+										<li>
+											The object pool class is made to be generic and can thus be templated to be used as a pool of a specific type. This allows it to be templated of the type 'MonoBehaviour'.
+										</li>
+										<li>
+											The object pool of type MonoBehaviour can be used to store gameobjects in a pool. The templated prefab for which the gameobject should be pooled can be specified in the class constructor as well as the parent to which the pooled gameobject should be a child of.
+										</li>
+										<li>
+											A defined function on each pooled object is called when retrieved and pushed into its respective pool allowing the object to perform actions when activated / deactivated such as instantiation / release of references etc.
+										</li>
+                                        <br />
+										<a href="https://github.com/RohanFernandez/ObjectPoolingSystem" class="icon brands alt fa"><img src="images/Project/icon_github.png" height="120" width="200" /></a>
+                                    </h5>
+                                </ul>
+                            </strong>
+                        </p>
+                </div>
+            </div>
+        </section>
+
+		<!-- Two -->
+        <section id="eleven" class="main style1">
+            <div class="container">
+                <div class="row gtr-150">
+                        <header class="major">
+                            <h2><strong><b>Multithreaded Job System - Hobby Project </b></strong><br /></h2>
+                            <h3><strong>C++</strong><br /></h3>
+                        </header>
+                        <p>
+                            <strong>
+                                <ul align="left">
+                                    <h5>
+                                        <li>
+											A simple job system implementing the usage of my knowledge of multithreading in C++.
+										</li>
+										<li>										
+											Initialize the system on start, thereby retrieving a pointer to the system and you should destroy the system on end.
+										</li>
+										<li>										
+											Jobs can be sent to be executed. Every thread on your system will be running continuously from the start. A thread will be put to sleep using a wake condition to avoid running the loop continuously if there are no jobs sent to be executed. When a job is submitted, a sleeping thread will be notified and will take it upon itself to run the job on a thread parallely.
+										</li>	
+										<li>
+											A job pool is a fixed size circular buffer that stores all the submitted jobs. The pool is responsible for managing the head and the tail. It works as a fixed size queue and with the help of mutex's it is built to be thread safe. Being thread-safe only a single thread can take the next job and a job can be put onto the buffer by preserving the head and tail position of the buffer.
+										</li>	
+										<li>
+											As all threads are always running in parallel, there is no way to join the threads and the threads are only stopped on destroying the Job System. Instead, the Wait function can be used to wait for execution for jobs on all threads to be completed until the main thread proceeds.
+                                        </li>
+                                        <br />
+										<a href="https://github.com/RohanFernandez/EmployeeOfTheMonthJobSystem" class="icon brands alt fa"><img src="images/Project/icon_github.png" height="120" width="200" /></a>
+                                    </h5>
+                                </ul>
+                            </strong>
+                        </p>
+                </div>
+            </div>
+        </section>
+
         <!-- One -->
-        <section id="ten" class="main style1">
+        <section id="twelve" class="main style2">
             <div class="container">
                 <div class="row gtr-150">
                         <header class="major">
@@ -504,6 +581,8 @@
                 </div>
             </div>
         </section>
+
+		
 
         <!-- Five -->
         <!--
