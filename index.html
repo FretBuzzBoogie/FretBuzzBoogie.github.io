@@ -567,7 +567,7 @@
                 <div class="row gtr-150">
                     <div class="col-6 col-12-medium">
                         <header class="major">
-                            <h2><strong><b>Graph Architecture Modeller - Lehrstuhl für Computergestützte Modellierung und Simulation - Research Assistant</b></strong><br /></h2>
+                            <h2><strong><b>Graph Architecture Modeller - TUM Lehrstuhl für Computergestützte Modellierung und Simulation - Research Assistant</b></strong><br /></h2>
                             <h3><strong>Revit, GrGen.NET, C#</strong><br /></h3>
                         </header>
                         <p>
@@ -601,7 +601,7 @@
             <div class="container">
                 <div class="row gtr-150">
                         <header class="major">
-                            <h2><strong><b>Real-time Adaptive Temporal Denoising using Mutual Information - Lehrstuhl für Grafik und Visualisierung - Master Thesis</b></strong><br /></h2>
+                            <h2><strong><b>Real-time Adaptive Temporal Denoising using Mutual Information - TUM Lehrstuhl für Grafik und Visualisierung - Master Thesis</b></strong><br /></h2>
                             <h3><strong>NVIDIA Falcor Rendering framework</strong><br /></h3>
                         </header>
                         <p>
@@ -609,18 +609,26 @@
                                 <h5>
                                     <ul align="left">
 									<li>
-										A chemistry experiment with the idea of the diffusion of tea particles when poured into boiling water. Built in augmented reality using the Hololens 2 for the purpose of teaching.
+										Real-time denoising built upon ASVGF (Adaptive Spatiotemporal Variance-Guided filtering). 
 									</li>
 									<li>
-										Created a simulation to initially move water particles (H20 molecules) using Bézier curves. Tea particles are then added into the beaker to simulate a similar movement in a solution.
+										The thesis is based upon using an information metric like Mutual Information and Entropy to substitue the luminance-variance in ASVGF.
 									</li>
 									<li>
-										H20 molecules and tea particles created using Blender with a low polygon count to allow for the existence of many such particles in a single scene.
+										Used the NVIDIA Falcor Rendering framework to build render graphs and add rendering code components of the filter.
 									</li>
 									<li>
-										Created a UI for the participant to navigate and give feedback.
+										Initially fixed the SVGF code of Falcor and built its rendergraph as per the paper that refers it. 
+									</li>
+									<li>
+										Referred to the ASVGF code from the original paper resource that was created using a 2018 version of Falcor with an Open GL renderer. Recreated the ASVGF denoiser using the current Falcor framework which uses DirectX 12.
+									</li>
+									<li>
+										Added the mutual information, entropy setting and other variables to test with different properties.
 									</li>
 									<br />
+									<a href="https://github.com/RohanFernandez/Falcor" target="_blank" class="icon brands alt fa"><img src="images/Project/icon_github.png" height="120" width="200" /></a>
+									<a href="https://drive.google.com/file/d/1u9CcATlSycOiGXV02YfDBLNVkxaaJS8e/view?usp=sharing" target="_blank" class="icon brands alt fa"><img src="images/Project/MasterThesisIcon.png" height="120" width="200" /></a>
 								</h5>
                                 </ul>
                             </strong>
