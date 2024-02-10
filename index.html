@@ -99,7 +99,7 @@
                                 <ul align="left">
                                     <h5>
                                         <li>
-                                            Outbreak is a single-player VR survival game currently in development. The game is based on a player moving about the environment to collect item-drops like weapons, bullets, interact with the environment like doors, cabinets and kill enemies to complete objectives and enjoy the story.
+                                            Outbreak is a single-player VR survival game. The game is based on a player collecting item-drops like weapons, bullets, interact with the environment like doors, cabinets and kill enemies to complete objectives and enjoy the story.
                                         </li>
                                         <li>
                                             For easy creation and maintenance of the project, I created a Level Manager, Task System, Objective Manager. These components are XML based and serializable systems, to make development easy for level designers and artists.
@@ -111,7 +111,7 @@
 											Task System : The task system includes XML pages which manages a sequence of instructions. For example : A designer can create a sequence of instructions to start/stop a sound, position the player, add/remove an object, manage the environment etc. And these sequences can be called from anywhere within the game with a unique ID.
 										</li>
 										<li>
-											Objective System : The objective system manages the range of objectives within any level. When an objective is complete, the system registers that completion and transitions the game to the next level on the completion of all objectives of that level. The objective list can be edited to be an unordered or ordered list, ordererd : an objective is complete only if the previos objective is complete.
+											Objective System : The objective system manages the range of objectives within any level. When an objective is complete, the system registers that completion and transitions the game to the next level on the completion of all objectives of that level. The objective list can be edited to be an unordered or ordered list, ordererd : an objective is complete only if the previous objective is complete.
 										</li>
                                         <li>
                                             All objects that are reusable in the game like item drops, weapon drops, enemies, 2D audio sources are managed by an object pool for optimization purposes to promote reusability and prevent the instantiation of an object each time it is required.
@@ -164,7 +164,7 @@
                                             A player can choose to purchase other levels or Mashmo coins and spend the coins on balls, ball skins etc to use in game.
                                         </li>
                                         <li>
-                                            Created a leaderboard, achievements and puzzle pieces unlock to engage the user with the game.
+                                            Created a leaderboard, achievements and puzzle pieces as collectables to unlock to engage the user with the game.
                                         </li>
                                     </h5>
 
@@ -346,7 +346,7 @@
                                     <ul align="left">
                                         <li>
                                             Anesthesia SimSTAT is a single player game made for anesthesiologists to simulate various medical scenarios.
-											The player is given a certain medical operation scenario with a patient that is suffering with particular conditions. The player is responsible to analyze and point out the steps to complete the operation while playing the role of an anesthesiologist.
+											The player is given a certain medical operation scenario with a patient that is suffering with particular conditions. The player's responsibility is to analyze and point out the steps to complete the operation while playing the role of an anesthesiologist.
                                         </li>
 										<li>
 											During the course of the game the player has to infuse the patient with the correct amount of medications. Set up a medication system to retrieve and send the correct dosage of medication to a server and the total amount of drugs infused.
@@ -467,7 +467,7 @@
                                 <h5>
                                     <ul align="left">
 									<li>
-										A research project to study the reaction of participants to the proximity of automated robots.
+										A research project to study the reaction of participants to the proximity of automated robots in VR compared to an actual physical automated robot.
 									</li>
 									<li>
 										The project includes 30 levels, each level test the participants psychological response to the proximity of the robot by clicking on the controller while the robot approaches the participant and the particpant walks along a straight line.
@@ -476,7 +476,7 @@
 										The robot reacts differently upon different circumstances, evading, stopping in place or backing off.
 									</li>
 									<li>
-										The application runs on the headset and the participant can give feedback with in-game UI on completion. The project runs on the PC monitor guided by a guide and controlls the trials with the UI on the screen.
+										The application runs on the headset and the participant can give feedback with in-game UI on completion. The project runs on the PC monitor guided by a guide that controls the trials with the UI on the screen.
 									</li>
 									<li>
 										Data of all the 30 trials are saved for research and functionality for recovery of the data is created in case of crashes during the application or headset malfunction.
@@ -578,7 +578,7 @@
                 <div class="row gtr-150">
                     <div class="col-6 col-12-medium">
                         <header class="major">
-                            <h2><strong><b>Graph Architecture Modeller - TUM Lehrstuhl für Computergestützte Modellierung und Simulation - Research Assistant</b></strong><br /></h2>
+                            <h2><strong><b>Graph rewrite and Architecture Modeller - TUM Lehrstuhl für Computergestützte Modellierung und Simulation - Research Assistant</b></strong><br /></h2>
                             <h3><strong>GrGen.NET, Autodesk Revit, C#</strong><br /></h3>
                         </header>
                         <p>
@@ -699,7 +699,7 @@
                                             Each scene manages all the gameobjects that are included in its hierarchy and a game object can be set to not be destroyed on transitioning to a different scene.
                                         </li>
                                         <li>
-                                            Attempted to replicate one of my favourite game 'Hotline Miami'
+                                            Attempted to replicate one of my favourite games 'Hotline Miami'
                                         </li>
 										<br />
                                         
@@ -809,7 +809,7 @@
 											Initialize the system on start, thereby retrieving a pointer to the system and you should destroy the system on end.
 										</li>
 										<li>										
-											Jobs can be sent to be executed. Every thread on your system will be running continuously from the start. A thread will be put to sleep using a wake condition to avoid running the loop continuously if there are no jobs sent to be executed. When a job is submitted, a sleeping thread will be notified and will take it upon itself to run the job on a thread parallely.
+											Jobs can be sent to be executed. Every thread on your system will be running continuously from the start. A thread will be put to sleep using a wake condition to avoid running the loop continuously if there are no jobs sent to be executed. When a job is submitted, a sleeping thread will be notified and will take it upon itself to run the job on a thread in parallel.
 										</li>	
 										<li>
 											A job pool is a fixed size circular buffer that stores all the submitted jobs. The pool is responsible for managing the head and the tail. It works as a fixed size queue and with the help of mutex's it is built to be thread safe. Being thread-safe only a single thread can take the next job and a job can be put onto the buffer by preserving the head and tail position of the buffer.
