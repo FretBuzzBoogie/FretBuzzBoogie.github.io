@@ -527,7 +527,7 @@
 										Created a simulation to initially move water particles (H20 molecules) using Bézier curves. Tea particles are then added into the beaker to simulate a similar movement in a solution.
 									</li>
 									<li>
-										H20 molecules and tea particles created using Blender with a low polygon count to allow for the existence of many such particles in a single scene.
+										H20 molecules and tea particles created using Blender with a low polygon count to allow for the existence of many such particles in a single scene. Multiple textures are baked into a single UV texture allowing the use of dynamic batching with a single material and hence fewer draw calls.
 									</li>
 									<li>
 										Created a UI for the participant to navigate and give feedback.
@@ -605,7 +605,7 @@
 											Created the UI on the Revit side to be rewritten into the graph.
 										</li>
 										<li>
-											The UI allows for modifications to that specific window with an id. (example that window is only allowed on a brick wall.)
+											The UI allows for modifications to that specific window with an ID. (example that window is only allowed on a brick wall.)
 										</li>
 										<li>
 											Created the UI on the Revit side to be rewritten into the graph and the rewritting process.
@@ -700,7 +700,7 @@
                                             The renderer in the engine manages all rendering paths, post processing using a single camera at the moment, resizing, Open GL rendering settings.
                                         </li>
 										<li>
-                                            The graphics components include a post processing unit that uses a frame buffer, a skybox renderer using a cubemap texture etc.
+                                            The graphics components include a post-processing unit that uses a frame buffer, a skybox renderer using a cubemap texture etc.
                                         </li>
 										<li>
                                             An object to render can easily be modified to use a different material with a vertex, fragment, geometry shader.
