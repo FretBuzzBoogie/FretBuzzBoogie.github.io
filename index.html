@@ -655,7 +655,7 @@
 										Used the NVIDIA Falcor Rendering framework to build render graphs and add rendering code components of the filter.
 									</li>
 									<li>
-										Initially fixed the SVGF code of Falcor and built its render graph as per the paper that refers it. 
+										Initially fixed the SVGF code of Falcor and built its render graph as per the paper that refers it. The assets of the scene are first stored using a deferred render pass and then to a path-tracer, the SVGF algorithm was fixed by correctly demodulating the visible image with the albedo, emission and specular textures to retrieve only the illumination as required by the algorithm.
 									</li>
 									<li>
 										Referred to the ASVGF code from the original paper resource that was created using a 2018 version of Falcor with an Open GL renderer. Recreated the ASVGF denoiser using the current Falcor framework which uses DirectX 12.
