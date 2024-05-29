@@ -130,7 +130,7 @@
                                             With the use of the above features the development process is made easy for designers to add cinematic and game play scenes. Each weapon and item in the game is customizable with a fire rate and other features.
                                         </li>
 										<li>
-                                            Created a shader for object highlighting, crosshair and environment designs. Optimized meshes and assets for its use on a low-powered VR headset.
+                                            Created a shader for object highlighting, crosshair and environment designs. Optimized meshes and assets for its use on a low-powered VR headset. Textures that belong to similar objects are baked into a single texture to make use of Unity's dynamic batching system and hence reduce draw calls.
                                         </li>
 										
                                     </h5>
@@ -659,6 +659,9 @@
 									</li>
 									<li>
 										Referred to the ASVGF code from the original paper resource that was created using a 2018 version of Falcor with an Open GL renderer. Recreated the ASVGF denoiser using the current Falcor framework which uses DirectX 12.
+									</li>
+									<li>
+										Once the color is demodulated, we get only the illumination of a single sample per-pixel. The reconstruction is then done by temporally and spatially filtering and after, the reverse procedure is performed i.e. the reconstructed illumination is modulated with the same textures to get the final color.
 									</li>
 									<li>
 										Added the mutual information, entropy setting and other variables to test with different properties.
